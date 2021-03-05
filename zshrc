@@ -77,7 +77,26 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+        git
+        zsh-z
+        battery
+        colored-man-pages
+        colorize
+        docker
+        jsontools
+        mvn
+        oc
+        pip
+        please
+        pyenv
+        screen
+        spring
+        sudo
+        tmux
+        zsh-interactive-cd
+        zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,6 +125,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
+
+# Installation and setup of ColorLS (LS with Icons)
+# https://www.ivaylopavlov.com/setting-up-windows-terminal-wsl-and-oh-my-zsh/#.YBGRVxZ7mtU
+source $(dirname $(gem which colorls))/tab_complete.sh
+alias ls=colorls
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,9 +1,10 @@
 - clean: ['~']
 
+- shell:
+    - [sh pre-install.sh, Running pre installation script]
+
 - link:
-    ~/.profile: profile
     ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
 
