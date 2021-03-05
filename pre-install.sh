@@ -15,3 +15,5 @@ if [! $0 = "-zsh"]; then
 else
   echo 'Already using zsh'
 fi
+
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
