@@ -8,4 +8,4 @@
     ~/.vimrc: vimrc
     ~/.vim: vim
     ~/.zshrc: zshrc
-
+    ~/.p10k.zsh: p10k.zsh
